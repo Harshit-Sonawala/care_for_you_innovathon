@@ -6,7 +6,13 @@
   </head>
   <body>
     <div class="header">
-      <h2 class="title">Care For You</h2>
+      <div class="flexRow">
+        <h2 class="title" id="one">Care For You</h2>
+        <div>
+          <a href="about.php" id="two">About</a>
+          <a href="login.php" id="two">Login</a>
+        </div>
+      </div>
     </div>
     <div class="carousel">
       <img class="carousel_image" src="assets\images\stock_image1.jpg" alt="">
@@ -22,11 +28,11 @@
       </div>
       <div class="card">
         <h2>Find experts to guide you through this state of mind.</h2>
-        <p>Its okay. We've all been there.</p>
+        <p>Find people to share your problems with.</p>
       </div>
       <div class="card">
         <h2>Easily connect with the help you need.</h2>
-        <p>Its okay. We've all been there.</p>
+        <p>Join now to find the correct guidance.</p>
       </div>
     </div>
   </body>
