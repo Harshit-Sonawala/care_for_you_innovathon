@@ -53,7 +53,7 @@
           ?>
           <div class="card">
             <div class="card-body">
-              <h6><strong><img src = "./dp/<?=$getSenderRow['dp']?>" alt = "dp" width = "40"/> <?=$lastMessageRow['sent_by'];?></strong><a href="./message.php?receiver=<?=$sent_by?>" class="btn btn-outline-primary" style = "float:right">Send message</a></h6>
+              <h2><img src = "./dp/<?=$getSenderRow['dp']?>" alt = "dp" width = "40"/> <?=$lastMessageRow['sent_by'];?><a href="./message.php?receiver=<?=$sent_by?>" class="btn btn-outline-primary" style = "float:right">Send message</a></h2>
             </div>
           </div><br/>
           <?php
@@ -61,7 +61,7 @@
           } else {
           ?>
             <div class="card-body text-center">
-              <h6><strong>No conversations yet!</strong></h6>
+              <h2>No conversations yet!</h2>
             </div>
           <?php
           }
