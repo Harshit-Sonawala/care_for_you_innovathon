@@ -38,9 +38,9 @@
     </div>
     <div class="center80">
       <div class="card">
-        <h2>Learn about the importance of mental health and the top ways to maintain it.</h2>
+        <h2>Learn about the strategies and treatments to fight depression.</h2>
         <div class="sized-box"></div>
-        <a href="blog.php">Click here to learn more</a>
+        <p>
       </div>
       <div class="card">
         <h2>Find experts to guide you through this state of mind.</h2>
