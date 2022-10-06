@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #f8f8f8;
+  background-color: #f2f2f2;
 }
 
 a {
@@ -27,6 +27,10 @@ a:hover {
 h2 {
   font-size: 22px;
   display: inline;
+}
+
+h3 {
+  margin: 10px;
 }
 
 .center80{
@@ -114,4 +118,37 @@ img:nth-child(5) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.smallcard {
+  width: 400px;
+  margin: auto;
+}
+
+.login-title {
+  padding: 10px;
+}
+
+input {
+  width: 80%;
+  padding: 8px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+}
+
+button {
+  margin: 10px;
+  padding: 5px 10px;
+  background-color: #f4f4f4;
+  color: #a5f019;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #a5f019;
+  color: #1d1d1d;
 }

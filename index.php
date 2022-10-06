@@ -7,10 +7,10 @@
   <body>
     <div class="header">
       <div class="flexRow">
-        <h2 class="title" id="one">Care For You</h2>
+        <h2 class="title">Care For You</h2>
         <div>
-          <a href="about.php" id="two">About</a>
-          <a href="login.php" id="two">Login</a>
+          <a href="about.php">Your Chats</a>
+          <a href="login.php">Login</a>
         </div>
       </div>
     </div>
@@ -34,6 +34,9 @@
         <h2>Easily connect with the help you need.</h2>
         <p>Join now to find the correct guidance.</p>
       </div>
+      <?php
+        include "common/snackbar.php";
+      ?>
     </div>
   </body>
 </html>
