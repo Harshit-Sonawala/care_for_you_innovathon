@@ -7,7 +7,7 @@
   <body>
     <div class="header">
       <div class="flexRow">
-        <h2 class="title">Care For You</h2>
+        <a href="index.php" class="title_a"><h2 class="title">Care For You</h2></a>
         <div>
           <a href="about.php">Your Chats</a>
           <a href="login.php">Login</a>

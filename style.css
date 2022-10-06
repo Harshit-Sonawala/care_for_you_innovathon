@@ -53,6 +53,14 @@ h3 {
   padding-right: 50px;
 }
 
+.title_a {
+  padding: 0;
+}
+
+.title_a:hover {
+  background-color: #fff;
+}
+
 .card {
   background-color: #fff;
   padding: 30px;
@@ -90,6 +98,7 @@ h3 {
 }
 
 .carousel > div {
+  width: 1000px;
   position: absolute;
   top: 0;
   left: calc(50% - 500px);
