@@ -26,7 +26,6 @@ a:hover {
 
 h2 {
   font-size: 22px;
-  display: inline;
 }
 
 h3 {
@@ -36,6 +35,10 @@ h3 {
 .center80{
   margin: auto;
   width: 80%;
+}
+
+.sized-box {
+  height: 20px;
 }
 
 .header {
@@ -83,7 +86,7 @@ h3 {
 .carousel {
   height: 450px;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .carousel > div {

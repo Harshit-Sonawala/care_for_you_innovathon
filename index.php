@@ -38,8 +38,9 @@
     </div>
     <div class="center80">
       <div class="card">
-        <h2>Life got you down? Don't worry, you can always get back up.</h2>
-        <p>Its okay. We've all been there.</p>
+        <h2>Learn about the importance of mental health and the top ways to maintain it.</h2>
+        <div class="sized-box"></div>
+        <a href="blog.php">Click here to learn more</a>
       </div>
       <div class="card">
         <h2>Find experts to guide you through this state of mind.</h2>
