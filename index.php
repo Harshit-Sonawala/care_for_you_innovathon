@@ -40,11 +40,12 @@
       <div class="card">
         <h2>Learn about the strategies and treatments to fight depression.</h2>
         <div class="sized-box"></div>
-        <p>
+        <a href="blog_depression.php">Click here to learn more</a>
       </div>
       <div class="card">
-        <h2>Find experts to guide you through this state of mind.</h2>
-        <p>Find people to share your problems with.</p>
+        <h2>Find out about anxiety, its symptoms, treatments and remedies.</h2>
+        <div class="sized-box"></div>
+        <a href="blog_anxiety.php">Click here to learn more</a>
       </div>
       <div class="card">
         <h2>Easily connect with the help you need.</h2>

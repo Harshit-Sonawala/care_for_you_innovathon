@@ -70,9 +70,6 @@
         <h2>11. Get enough sleep</h2>
         <p>Regular, quality sleep is essential for mental health. Too much or too little sleep can be a symptom of depression when it occurs along with other symptoms, such as prolonged feelings of sadness. Aim to sleep for 7–9 hours each night and to go to bed and get up at the same time each day.</p>
       </div>
-      <?php
-        include "common/snackbar.php";
-      ?>
     </div>
   </body>
 </html>
