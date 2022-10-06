@@ -13,6 +13,7 @@
         <div>
           <a href="chats.php">Chats</a>
           <?php
+            session_start();
             if(isset($_SESSION['email'])) {
               // <a href="logoutaction.php">Logout</a>
           ?>
@@ -23,7 +24,7 @@
             <a href="login.php">Login</a>
           <?php
             }
-          ?>          
+          ?>
         </div>
       </div>
     </div>

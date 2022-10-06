@@ -44,30 +44,55 @@
       </div>
       <div class="card">
         <?php
-            $lastMessage = "SELECT DISTINCT sent_by FROM messages WHERE received_by = '$email'";
-            $lastMessageStatus = mysqli_query($conn,$lastMessage) or die(mysqli_error($conn));
-            if(mysqli_num_rows($lastMessageStatus) > 0) {
-              while($lastMessageRow = mysqli_fetch_assoc($lastMessageStatus)) {
-                $sent_by = $lastMessageRow['sent_by'];
-                $getSender = "SELECT * FROM users WHERE email = '$sent_by'";
-                $getSenderStatus = mysqli_query($conn,$getSender) or die(mysqli_error($conn));
-                $getSenderRow = mysqli_fetch_assoc($getSenderStatus);
-          ?>
-          <div class="card">
-            <div class="card-body">
-              <h6><strong><img src = "./dp/<?=$getSenderRow['dp']?>" alt = "dp" width = "40"/> <?=$lastMessageRow['sent_by'];?></strong><a href="./message.php?receiver=<?=$sent_by?>" class="btn btn-outline-primary" style = "float:right">Send message</a></h6>
-            </div>
-          </div><br/>
-          <?php
+          $getReceiver = "SELECT * FROM users WHERE email = '$receiver'";
+          $getReceiverStatus = mysqli_query($conn,$getReceiver) or die(mysqli_error($conn));
+          $getReceiverRow = mysqli_fetch_assoc($getReceiverStatus);
+          $received_by = $getReceiverRow['email'];
+        ?>
+        <div class="card2">
+          <h2><img src="./dp/<?=$getReceiverRow['dp']?>" alt="Profile image" width="40" height="40"/><?=$receiver?></h2>
+        </div>
+        <?php
+          $getMessage = "SELECT * FROM messages WHERE sent_by = '$receiver' AND received_by = '$email' OR sent_by = '$email' AND received_by = '$receiver' ORDER BY createdAt asc";
+          $getMessageStatus = mysqli_query($conn,$getMessage) or die(mysqli_error($conn));
+          if(mysqli_num_rows($getMessageStatus) > 0) {
+              while($getMessageRow = mysqli_fetch_assoc($getMessageStatus)) {
+                  $message_id = $getMessageRow['id'];
+        ?>
+        <div class="card2">
+          <h3 style = "color: #007bff"><?=$getMessageRow['sent_by']?></h3>
+              <div class="message-box ml-4">
+                  <p class="text-center"><?=$getMessageRow['message']?></p>
+              </div>
+        </div>
+        <?php
+              }
+            } else {
+        ?>
+        <div class="card-body">
+                <p class = "text-muted">No messages yet! Say 'Hi'</p>
+        </div>
+        <?php
             }
-          } else {
-          ?>
-            <div class="card-body text-center">
-              <h6><strong>No conversations yet!</strong></h6>
+        ?>
+        <div class="card2">
+        <div class="card-footer text-center">
+            <form action="send.php" method = "POST" style = "display: inline-block">
+            <input type="hidden" name = "sent_by" value = "<?=$email?>"/>
+            <input type="hidden" name = "received_by" value = "<?=$receiver?>"/>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="form-group">
+                                <input type="text" name = "message" id = "message" class="form-control" placeholder = "Type your message here" required/>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button type = "submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-          <?php
-          }
-          ?>
+        </div>
       </div>
       <?php
         include "common/snackbar.php";

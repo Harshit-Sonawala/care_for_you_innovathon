@@ -223,3 +223,11 @@ button:hover {
   height: auto;
   border-radius: 5px;
 }
+
+.card2 {
+  border: 1px solid #333;
+  background-color: #fff;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 10px;
+}

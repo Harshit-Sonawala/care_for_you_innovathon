@@ -27,7 +27,21 @@
   <body onLoad="snackbarFunction()">
     <div class="header">
       <div class="flexRow">
-        <h2 class="title">Care For You</h2>
+      <a href="index.php" class="title_a"><h2 class="title">Care For You</h2></a>
+        <div>
+          <?php
+            if(isset($_SESSION['email'])) {
+              // <a href="logoutaction.php">Logout</a>
+          ?>
+            <a href="logoutaction.php">Logout</a>
+          <?php
+            } else {
+          ?>
+            <a href="login.php">Login</a>
+          <?php
+            }
+          ?>
+        </div>
       </div>
     </div>
     <div class="center80">
