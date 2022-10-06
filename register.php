@@ -33,16 +33,26 @@
     </div>
     <div class="center80">
       <div class="card smallcard">
-        <h2 class="login-title">Login</h2>
-        <form action="loginaction.php" method = "POST">
+        <h2 class="login-title">Register</h2>
+        <form action="registeraction.php" method = "POST">
           <div class="form-group">
-            <input type="email" name="email" id = "email" placeholder="Email" class="form-control" required/>
+            <input type="text" name="name" id="name" placeholder="Full Name" class="form-control" required/>
           </div>
           <div class="form-group">
-            <input type="password" name = "password" id="password" placeholder="Password" class="form-control" required/>
+            <input type="email" name="email" id="email" placeholder="Email" class="form-control" required/>
           </div>
-          <button type = "submit" class="button">Login</button>
-          <p>New to Care For You? <a href="./register.php">Register Here!</a></p>
+          <div class="form-group">
+            <input type="password" name="password" id="password" placeholder="Password" class="form-control" required/>
+          </div>
+          <div class="form-group">
+            <input type="password" name = "cpassword" id = "cpassword" placeholder = "Confirm Password" class="form-control" required/>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Upload a profile picture</label>
+            <input type="file" class="form-control-file" id="dp" name="dp" required/>
+          </div>
+          <button type="submit" class="button">Register</button>
+          <p>Have an account? <a href="./login.php">Login Here!</a></p>
         </form>
       </div>
       <?php

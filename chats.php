@@ -5,17 +5,16 @@
 
     // include DB connection
     include('./db.php');
-    error_reporting(0);
 
-    // getting the message
-    $message = $_GET['message'];
+    if(isset($_SESSION['email'])) { // if user not logged in!
 
-    // checking if the user is logged in or not
-    // if(isset($_SESSION['email'])) { // if logged in
+        $email = $_SESSION['email'];
 
-    //     header('Location: ./chats.php');
+    } else {
 
-    // }
+      header('Location: ./index.php?message=Please login first!');
+
+    }
 ?>
 <!DOCTYPE html>
 <html>

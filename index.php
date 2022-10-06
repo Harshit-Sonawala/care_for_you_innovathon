@@ -2,9 +2,11 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="common/snackbar.css">
+    <script src="assets/js/snackbar.js"></script>
     <title>Care For You</title>
   </head>
-  <body>
+  <body onLoad="snackbarFunction()">
     <div class="header">
       <div class="flexRow">
         <a href="index.php" class="title_a"><h2 class="title">Care For You</h2></a>
@@ -37,6 +39,11 @@
       </div>
     </div>
     <div class="center80">
+      <div class="card">
+        <h2>Connect with counselors to help solve your problems.</h2>
+        <div class="sized-box"></div>
+        <a href="chats.php">Click here to start chatting</a>
+      </div>
       <div class="card">
         <h2>Learn about the strategies and treatments to fight depression.</h2>
         <div class="sized-box"></div>
