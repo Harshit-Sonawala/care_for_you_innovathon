@@ -15,11 +15,26 @@
       </div>
     </div>
     <div class="carousel">
-      <img class="carousel_image" src="assets\images\stock_image1.jpg" alt="">
-      <img class="carousel_image" src="assets\images\stock_image2.jpg" alt="">
-      <img class="carousel_image" src="assets\images\stock_image3.jpg" alt="">
-      <img class="carousel_image" src="assets\images\stock_image4.jpg" alt="">
-      <img class="carousel_image" src="assets\images\stock_image5.jpg" alt="">
+      <div class="carousel_card" id="carousel_1">
+        <h2 class="carousel_h2">Life got you down? Don't worry, you can always get back up.</h2>
+        <p class="carousel_p">Its okay. We've all been there.</p>
+      </div>
+      <div class="carousel_card" id="carousel_2">
+        <h2 class="carousel_h2">Find experts to guide you through this state of mind.</h2>
+        <p class="carousel_p">Find people to share your problems with.</p>
+      </div>
+      <div class="carousel_card" id="carousel_3">
+        <h2 class="carousel_h2">Easily connect with the help you need.</h2>
+        <p class="carousel_p">Join now to find the correct guidance.</p>
+      </div>
+      <div class="carousel_card" id="carousel_4">
+        <h2 class="carousel_h2">It's never too late to start again.</h2>
+        <p class="carousel_p">Never give up. Never back down.</p>
+      </div>
+      <div class="carousel_card" id="carousel_5">
+        <h2 class="carousel_h2">Everybody deserves the utmost mental well-being.</h2>
+        <p class="carousel_p">Learn to value the importance of mental health.</p>
+      </div>
     </div>
     <div class="center80">
       <div class="card">
