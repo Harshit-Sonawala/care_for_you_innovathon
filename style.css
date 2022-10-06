@@ -38,3 +38,60 @@ h2 {
   margin: 10px;
   border-radius: 10px;
 }
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.carousel {
+  height: 400px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.carousel > img {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 500px);
+  opacity: 0;
+  animation: display 10s infinite;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
+}
+
+.carousel_image {
+  object-fit: cover;
+  height: 400px;
+  width: 1000px;
+  border-radius: 10px;
+}
