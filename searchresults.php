@@ -51,7 +51,7 @@
           ?>
           <div class="card">
             <div class="card-body">
-                <h6><strong><img src = "./dp/<?=$searchUserRow['dp']?>" alt = "dp" width = "40"/><?=$searchUserRow['name']?></strong><a href="./message.php?receiver=<?=$email?>" class="btn btn-outline-primary" style = "float:right">Send message</a></h6>
+                <h4><img src = "dp/<?=$searchUserRow['dp']?>" alt="dp" width="50" height="50"/><div class="sized-width-box"></div><?=$searchUserRow['name']?><a href="./message.php?receiver=<?=$email?>" class="btn btn-outline-primary" style = "float:right">Send message</a></h4>
             </div>
           </div>
           <?php

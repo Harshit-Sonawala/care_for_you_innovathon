@@ -42,20 +42,20 @@
 
             } else {
 
-                header('Location: ./index.php?message=Password doesnt match!');
+                header('Location: ./login.php?message=Password doesnt match!');
 
             }
 
 
         } else {
 
-            header('Location: ./index.php?message=Unable to login into your account!');
+            header('Location: ./login.php?message=Unable to login into your account!');
 
         }
 
     } else { // if the fields are empty
 
-        header('Location: ./index.php?message=Please fill all the fields!');
+        header('Location: ./login.php?message=Please fill all the fields!');
 
     }
 
