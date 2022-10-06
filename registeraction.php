@@ -30,7 +30,7 @@
     $newPassword = md5(md5($password).$salt);
 
     // setting up the target directory where you want to upload your images!
-    $target_dir = "dp";
+    $target_dir = "./dp/";
     $target_file = $target_dir . basename($_FILES["dp"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));

@@ -64,7 +64,7 @@
           $received_by = $getReceiverRow['email'];
         ?>
         <div class="card2">
-          <h4><img src="dp/<?=$getReceiverRow['dp']?>" alt="dp" width="50px" height="50px"/></div><?=$receiver?></h4>
+          <h4><img src="./dp/<?=$getReceiverRow['dp']?>" alt="dp" width="50px" height="50px"/></div><?=$receiver?></h4>
         </div>
         <div class="card2">
         <?php
