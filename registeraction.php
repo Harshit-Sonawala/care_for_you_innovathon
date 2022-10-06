@@ -98,7 +98,7 @@
     
                 if($insertUserStatus) { // if the user is successfully registered
       
-                    header('Location: ./index.php?message=You have registered successfully!');
+                    header('Location: ./login.php?message=You have registered successfully!');
     
                 }  else { // if user is not registered successfully
     

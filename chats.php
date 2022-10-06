@@ -67,7 +67,7 @@
           ?>
           <div class="card">
             <div class="card-body">
-              <h2><img src = "./dp/<?=$getSenderRow['dp']?>"alt="dp" width="50px" height="50px"/> <?=$lastMessageRow['sent_by'];?><a href="./message.php?receiver=<?=$sent_by?>" class="btn btn-outline-primary" style = "float:right">Send message</a></h2>
+              <h4><img src = "./dp/<?=$getSenderRow['dp']?>"alt="dp" width="50px" height="50px"/> <?=$lastMessageRow['sent_by'];?><a href="./message.php?receiver=<?=$sent_by?>" class="btn btn-outline-primary" style = "float:right">Send message</a></h4>
             </div>
           </div><br/>
           <?php
