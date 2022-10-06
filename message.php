@@ -50,8 +50,9 @@
           $received_by = $getReceiverRow['email'];
         ?>
         <div class="card2">
-          <h2><img src="./dp/<?=$getReceiverRow['dp']?>" alt="Profile image" width="40" height="40"/><?=$receiver?></h2>
+          <h4><img src="dp/<?=$getReceiverRow['dp']?>" alt="dp" width="50px" height="50px"/><?=$receiver?></h4>
         </div>
+        <div class="card2">
         <?php
           $getMessage = "SELECT * FROM messages WHERE sent_by = '$receiver' AND received_by = '$email' OR sent_by = '$email' AND received_by = '$receiver' ORDER BY createdAt asc";
           $getMessageStatus = mysqli_query($conn,$getMessage) or die(mysqli_error($conn));
@@ -59,8 +60,9 @@
               while($getMessageRow = mysqli_fetch_assoc($getMessageStatus)) {
                   $message_id = $getMessageRow['id'];
         ?>
-        <div class="card2">
-          <h3 style = "color: #007bff"><?=$getMessageRow['sent_by']?></h3>
+        <div class="card3">
+          <h5 style = "color: #19aff0"><?=$getMessageRow['sent_by']?></h5>
+          <div class="sized-box" style="height: 5px"></div>
               <div class="message-box ml-4">
                   <p class="text-center"><?=$getMessageRow['message']?></p>
               </div>
@@ -69,25 +71,23 @@
               }
             } else {
         ?>
-        <div class="card-body">
+        <div class="card3">
                 <p class = "text-muted">No messages yet! Say 'Hi'</p>
         </div>
         <?php
             }
         ?>
+        </div>
         <div class="card2">
         <div class="card-footer text-center">
             <form action="send.php" method = "POST" style = "display: inline-block">
             <input type="hidden" name = "sent_by" value = "<?=$email?>"/>
             <input type="hidden" name = "received_by" value = "<?=$receiver?>"/>
                     <div class="row">
-                        <div class="col-md-10">
-                            <div class="form-group">
-                                <input type="text" name = "message" id = "message" class="form-control" placeholder = "Type your message here" required/>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <button type = "submit" class="btn btn-primary">Send</button>
+                        <div class="flexRow">
+                            <input type="text" name = "message" id = "message" class="form-control" placeholder = "Type your message here" required/>
+                            <div class="sized-width-box"></div>
+                            <button type="submit" class="btn btn-primary" style="width: 100px">Send</button>
                         </div>
                     </div>
                 </form>
