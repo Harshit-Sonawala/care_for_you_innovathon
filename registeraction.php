@@ -30,7 +30,7 @@
     $newPassword = md5(md5($password).$salt);
 
     // setting up the target directory where you want to upload your images!
-    $target_dir = "../dp/";
+    $target_dir = "./dp/";
     $target_file = $target_dir . basename($_FILES["dp"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -84,29 +84,29 @@
         $checkUser = "SELECT * FROM users WHERE email = '$email'";
         $checkUserStatus = mysqli_query($conn,$checkUser) or die(mysqli_error($conn));
 
-        if(mysqli_num_rows($checkUserStatus) > 0) { // if user exists!
+        if(mysqli_num_rows($checkUserStatus) > 0) { // if user exists
 
             header('Location: ../index.php?message=You have already registered!');
 
         } else {
 
-            if($password == $cpassword) { // if the password fields match!
+            if($password == $cpassword) { // if the password fields match
             
                 $image = basename($_FILES["dp"]["name"]);
                 $insertUser = "INSERT INTO users(`name`,`email`,`password`,`dp`,`salt`) VALUES('$name','$email','$newPassword','$image','$salt')";
                 $insertUserStatus = mysqli_query($conn,$insertUser) or die(mysqli_error($conn));
     
-                if($insertUserStatus) { // if the user is successfully registered!
+                if($insertUserStatus) { // if the user is successfully registered
       
                     header('Location: ./index.php?message=You have registered successfully!');
     
-                }  else { // if user is not registered successfully!
+                }  else { // if user is not registered successfully
     
                     header('Location: ./register.php?message=Unable to register!');
     
                 }
     
-            } else { // if password fields dont match!
+            } else { // if password fields dont match
     
                 header('Location: ./register.php?message=Password fields do not match!');
     
@@ -115,7 +115,7 @@
         }
 
 
-    } else { // if any of the fields are empty!
+    } else { // if any of the fields are empty
 
         header('Location: ./register.php?message=Please fill the fields properly!');  
 

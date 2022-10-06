@@ -6,15 +6,17 @@
     // include DB connection
     include('./db.php');
 
-    if(isset($_SESSION['email'])) { // if user not logged in!
+    error_reporting(0);
+    if(!isset($_SESSION['email'])) { // if user not logged in!
 
-        $email = $_SESSION['email'];
+        header('Location: ./index.php');
 
     } else {
 
-      header('Location: ./index.php?message=Please login first!');
+        $email = $_SESSION['email'];
 
     }
+    $receiver = $_GET['receiver'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +26,7 @@
     <script src="assets/js/snackbar.js"></script>
     <title>Care For You</title>
   </head>
-  <body onLoad="snackbarFunction()">
+  <body>
     <div class="header">
       <div class="flexRow">
         <h2 class="title">Care For You</h2>

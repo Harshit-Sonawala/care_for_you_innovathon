@@ -9,7 +9,7 @@
       <div class="flexRow">
         <a href="index.php" class="title_a"><h2 class="title">Care For You</h2></a>
         <div>
-          <a href="about.php">Your Chats</a>
+          <a href="about.php">Chats</a>
           <a href="login.php">Login</a>
         </div>
       </div>

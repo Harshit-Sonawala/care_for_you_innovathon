@@ -216,3 +216,10 @@ button:hover {
   width: 100%;
   border-radius: 10px;
 }
+
+.message-box{
+  background-color: whitesmoke;
+  width: 30%;
+  height: auto;
+  border-radius: 5px;
+}
