@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="center80">
-      <img src="assets\images\anxiety.jpg" class="image" alt="">
+      <img src="assets\images\anxiety.jpg" class="image" alt=" ">
       <div class="card">
         <h2 class="title">A deep dive into everything about anxiety</h2>
         <div class="sized-box"></div>

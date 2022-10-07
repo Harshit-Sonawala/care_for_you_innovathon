@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="center80">
-      <img src="assets\images\depression.jpg" class="image" alt="">
+      <img src="assets\images\depression.jpg" class="image" alt=" ">
       <div class="card">
         <h2 class="title">Most effective strategies and treatments to fight depression</h2>
         <div class="sized-box"></div>
